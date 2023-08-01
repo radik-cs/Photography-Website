@@ -1,0 +1,808 @@
+/* Reset default styles */
+body, h1, h2, p, ul, li, input, textarea, button, label {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  height: 90px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.header-content h1 {
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.header-content h2 {
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: normal;
+  color: #888;
+  margin: 0;
+}
+
+
+nav {
+  display: flex;
+  align-items:center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: inline-flex; /* Display the menu items in a row */
+  justify-content: center; /* Center the menu items horizontally */
+  align-items: center; /* Center the menu items vertically */
+  padding: 0;
+  margin: 0;
+}
+
+
+nav ul li {
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #888;
+}
+
+
+
+/* Hamburger menu icon */
+.hamburger-menu {
+  display: none; /* Hide the hamburger icon by default */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30px; /* Adjust the width */
+  height: 25px; /* Adjust the height */
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  width: 30px; /* Adjust the width */
+  height: 4px; /* Adjust the height */
+  background-color: #333; /* Change the color if needed */
+  margin: 3px 0; /* Adjust the spacing between the stripes */
+}
+
+
+
+
+/* Media query for min-width 767px and max-width 991px */
+@media (max-width:767px) and (min-width:991px){
+  header{
+    padding: 0 20px;
+  }
+  .header-content {
+    margin-right: auto;
+  }
+
+}
+
+
+/* Media query for min-width 991px */
+@media only screen and (min-width: 991px) {
+header{
+  padding: 0 20px;
+}
+nav ul.main-menu {
+
+/*  margin-right: 300px;
+  margin-left: 150px;
+*/
+}
+
+#mainMenu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#mainMenu .main-menu {
+  flex-grow: 1;
+  flex-basis: auto;
+}
+#mainMenu .social-icons {
+  flex-basis: 100px;
+}
+
+}
+
+
+/* Media query for max width 767px */
+@media only screen and (max-width: 991px) {
+  header {
+    padding-right: 20px;
+  }
+
+  .header-content {
+    margin-right: auto;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+  }
+  
+
+  .hamburger-icon {
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin: 2px 0;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+
+  nav.show-menu {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .social-icons-footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-icons-footer a {
+    margin: 0 10px;
+  }
+
+  .social-icons-footer img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Home page */
+#hero {
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 200px 0;
+  width: auto;
+  height: 350px;
+}
+
+/* About */
+#about {
+  background-color: #f7f0f0;
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* Banner */
+#banner {
+  width: 100%;
+  height: 300px;
+  background-image: url('images/summer_1.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#banner h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#about .about-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 20px;
+}
+
+#about .about-image {
+  width: 450px;
+  height: 450px;
+  margin: 0 60px;
+}
+
+#about .about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about .about-text {
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+#about .about-text h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#about .about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+#about .about-text a {
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#about .about-text a:hover {
+  color: #888;
+}
+
+.connect-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.connect-button a {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.connect-button a:hover {
+  background-color: #888;
+}
+
+/* Portfolio */
+#banner-portfolio {
+  width: 100%;
+  height: 300px;
+  background-image: url('images/banner_portfolio_3.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#banner-portfolio h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#portfolio {
+  background-color: #f7f0f0;
+  padding: 50px 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 30px;
+  justify-items: center;
+  margin: 0 -15px;
+  position: relative;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.gallery-item:hover .gallery-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gallery-text a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Prices */
+#prices {
+  background-color: #f7f0f0;
+  padding: 50px 20px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+}
+
+#banner-prices {
+  width: 100%;
+  height: 300px;
+  background-image: url('images/winter_2.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#banner-prices h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#prices h2 {
+  margin-top: auto;
+  margin-bottom: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color:black;
+  font-size: 25px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.pricing-text {
+  font-size: 20px;
+  color: black;
+  line-height: 1.5;
+  margin-top: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.pricing-text p {
+  margin-bottom: 10px;
+}
+
+#prices .connect-button a {
+  margin-top: 10px;
+  display: inline-block;
+  background-color:black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#prices .connect-button a:hover {
+  background-color: #555;
+}
+
+/* Contact */
+#contact {
+  background-color: #f7f0f0;
+  padding: 50px 0;
+  text-align: center;
+}
+
+#banner-contact {
+  width: 100%;
+  height: 300px;
+  background-image: url('images/sunset_2.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#banner-contact h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 150px;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='16' height='16' fill='%23000'%3E%3Cpath d='M8 10L2 4h12l-6 6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 8px 8px;
+  padding-right: 30px;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 5px;
+}
+
+.social-icons-footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons-footer a {
+  margin: 0 8px;
+}
+
+.social-icons-footer img {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+
+/* Weddings */
+#weddings {
+  background-color: #f7f0f0;
+  padding: 80px 0;
+  text-align: center;
+}
+
+#banner-weddings {
+  width: 100%;
+  height: 300px;
+  background-image: url('images/portfolio/weddings/14.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#banner-weddings h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* Couples */
+#couples {
+  background-color: #f7f0f0;
+  padding: 80px 0;
+  text-align: center;
+}
+
+#banner-couples {
+  width: 100%;
+  height: 300px;
+  background-image: url('images/portfolio/couples/couple_1.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#banner-couples h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* Proposals */
+#proposals {
+  background-color: #f7f0f0;
+  padding: 80px 0;
+  text-align: center;
+}
+
+#banner-proposals {
+  width: 100%;
+  height: 300px;
+  background-image: url('images/portfolio/proposals/proposal-4.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#banner-proposals h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* Newborns */
+#newborns {
+  background-color: #f7f0f0;
+  padding: 80px 0;
+  text-align: center;
+}
+
+#banner-newborns {
+  width: 100%;
+  height: 300px;
+  background-image: url('images/portfolio/newborns/newborn_2.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#banner-newborns h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* Milestones */
+#milestones {
+  background-color: #f7f0f0;
+  padding: 80px 0;
+  text-align: center;
+}
+
+#banner-milestones {
+  width: 100%;
+  height: 300px;
+  background-image: url('images/portfolio/milestones/milestone_5.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#banner-milestones h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* Families */
+#families {
+  background-color: #f7f0f0;
+  padding: 80px 0;
+  text-align: center;
+}
+
+#banner-families {
+  width: 100%;
+  height: 300px;
+  background-image: url('images/portfolio/families/family_3.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#banner-families h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* Graduations */
+#graduations {
+  background-color: #f7f0f0;
+  padding: 80px 0;
+  text-align: center;
+}
+
+#banner-graduations {
+  width: 100%;
+  height: 300px;
+  background-image: url('images/portfolio/graduations/graduation_4.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#banner-graduations h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* Portraits */
+#portraits {
+  background-color: #f7f0f0;
+  padding: 80px 0;
+  text-align: center;
+}
+
+#banner-portraits {
+  width: 100%;
+  height: 300px;
+  background-image: url('images/portfolio/portraits/11.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#banner-portraits h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+/************************************/
+/****************************************/
+/****************************************/
+/****************************************/
+/****************************************/
+/****************************************/
+/****************************************/

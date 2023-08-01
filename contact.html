@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rada Abib Photography</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function toggleMenu() {
+      var mainMenu = document.getElementById("mainMenu");
+      mainMenu.classList.toggle("show-menu");
+    }
+  </script>
+
+</head>
+<body>
+  <!-- Header -->
+<header>
+  <div class="header-content">
+    <h1>Rada Abib</h1>
+    <h2>Photography</h2>
+  </div>
+  <div class="hamburger-menu" onclick="toggleMenu()">
+    <div class="hamburger-icon"></div>
+    <div class="hamburger-icon"></div>
+    <div class="hamburger-icon"></div>
+  </div>
+  <nav id="mainMenu">
+    <ul class="main-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="prices.html">Investment</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="social-icons">
+      <a href="tel:+1(440)668-1805"><img src="images/phone_logo.png" alt="Phone" width="30" height="30"></a>
+      <a href="https://www.instagram.com/rada_abib_photography/?hl=en"><img src="images/Instagram_icon.png" alt="Instagram" width="30" height="30"></a>
+      <a href="https://www.facebook.com/radaabibphotography"><img src="images/facebook_icon.png" alt="Facebook" width="30" height="30"></a>
+    </div>
+  </nav>
+</header>
+
+  <section id="banner-contact">
+    <h1>Contact</h1>
+  </section>
+
+  <section id="contact">
+    <h2>Please fill out the form!</h2>
+    <br>
+    <form class="contact-form">
+      <div class="form-group">
+        <input type="text" placeholder="First Name">
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Last Name">
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <input type="tel" placeholder="Phone Number">
+      </div>
+      <div class="form-group">
+        <select>
+          <option disabled selected>What type of photography are you interested in?</option>
+          <option>Weddings</option>
+          <option>Intimate Weddings</option>
+          <option>Proposals</option>
+          <option>Newborns</option>
+          <option>Milestones</option>
+          <option>Families</option>
+          <option>Graduations</option>
+          <option>Portraits</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="date" placeholder="Requested Event or Session Date">
+      </div>
+      <div class="form-group">
+        <select>
+          <option disabled selected>Coverage</option>
+          <option>Photography</option>
+          <option>Photo & Video</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <select>
+          <option disabled selected>How did you hear about Me?</option>
+          <option>Referral</option>
+          <option>Facebook</option>
+          <option>Instagram</option>
+          <option>Google</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <textarea placeholder="Anything else you'd like to share?"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit"><a href="mailto:radaabibphotography@gmail.com" style="text-decoration: none; color: white;">Submit</a></button>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <br>
+    <p><strong>&copy; 2023 Rada Abib Photography. All rights reserved.</strong></p>
+    <p><strong>Made by <a href="https://radikfakhretdinov.com" style="color:black;">Radik Fakhretdinov</a></strong></p>
+    <div class="social-icons">
+      <a href="tel:+1(440)668-1805"><img src="images/phone_logo.png" alt="Phone" width="20" height="20"></a>
+      <a href="https://www.instagram.com/rada_abib_photography/?hl=en"><img src="images/Instagram_icon.png" alt="Instagram" width="20" height="20"></a>
+      <a href="https://www.facebook.com/radaabibphotography"><img src="images/facebook_icon.png" alt="Facebook" width="20" height="20"></a>
+    </div>
+  </footer>
+
+</body>
+</html>

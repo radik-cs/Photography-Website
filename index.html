@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rada Abib - Photography</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <h1>Rada Abib</h1>
+      <h2>Photography</h2>
+    </div>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      <div class="hamburger-icon"></div>
+      <div class="hamburger-icon"></div>
+      <div class="hamburger-icon"></div>
+    </div>
+    <nav id="mainMenu">
+      <ul class="main-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="prices.html">Investment</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <br>
+      <div class="social-icons">
+        <a href="tel:+1(440)668-1805"><img src="images/phone_logo.png" alt="Phone" width="30" height="30"></a>
+        <a href="https://www.instagram.com/rada_abib_photography/?hl=en"><img src="images/Instagram_icon.png" alt="Instagram" width="30" height="30"></a>
+        <a href="https://www.facebook.com/radaabibphotography"><img src="images/facebook_icon.png" alt="Facebook" width="30" height="30"></a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var images = [
+          "pic_1.png",
+          "pic_2.png",
+          "pic_3.png",
+          "pic_4.png",
+          "pic_5.png",
+          "pic_6.png"
+        ];
+        var hero = document.getElementById("hero");
+        var index = 0;
+
+        function changeBackgroundImage() {
+          var nextIndex = (index + 1) % images.length;
+          var nextImage = new Image();
+          nextImage.src = "images/" + images[nextIndex];
+          nextImage.addEventListener("load", function() {
+            hero.style.backgroundImage = "url('" + nextImage.src + "')";
+            hero.style.opacity = 1; // Fade in the new image
+            index = nextIndex;
+            setTimeout(changeBackgroundImage, 3000); // Change image every 5 seconds
+          });
+        }
+
+        changeBackgroundImage(); // Initial call to start changing images
+      });
+
+      function toggleMenu() {
+        var menu = document.getElementById('mainMenu');
+        menu.classList.toggle('show-menu');
+      }
+    </script>
+  </section>
+
+  <!-- Rest of your content -->
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>&copy; 2023 Rada Abib Photography. All rights reserved.</strong></p>
+    <p><strong>Made by <a href="https://radikfakhretdinov.com" style="color: black;">Radik Fakhretdinov</a></strong></p>
+    <div class="social-icons-footer">
+      <a href="tel:+1(440)668-1805"><img src="images/phone_logo.png" alt="Phone" width="20" height="20"></a>
+      <a href="https://www.instagram.com/rada_abib_photography/?hl=en"><img src="images/Instagram_icon.png" alt="Instagram" width="20" height="20"></a>
+      <a href="https://www.facebook.com/radaabibphotography"><img src="images/facebook_icon.png" alt="Facebook" width="20" height="20"></a>
+    </div>
+  </footer>
+
+</body>
+</html>
